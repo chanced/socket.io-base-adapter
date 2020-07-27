@@ -1,0 +1,39 @@
+{
+  "name": "socket.io-base-adapter",
+  "version": "0.0.1",
+  "description": "Base adapter for Socket.io written in TypeSript",
+  "main": "dist/index.js",
+  "dependencies": {
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "debug": "^4.1.1",
+    "jest": "^26.1.0",
+    "ts-node": "^8.10.2",
+    "ts-node-dev": "^1.0.0-pre.56",
+    "typescript": "^3.9.7",
+    "@types/socket.io": "^1.4.33"
+  },
+  "peerDependencies": {
+    "socket.io": "^2.3.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chanced/socket.io-base-adapter.git"
+  },
+  "keywords": [
+    "socket.io",
+    "socket-io",
+    "socket.io-adapter"
+  ],
+  "author": "chance dinkins",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chanced/socket.io-base-adapter/issues"
+  },
+  "homepage": "https://github.com/chanced/socket.io-base-adapter#readme"
+}
