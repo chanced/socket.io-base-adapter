@@ -71,10 +71,7 @@ export type GetParticipantOpts = {
 type SocketIdsDictionary = { [id: string]: { [room: string]: boolean } };
 
 /**
- * RabbitMQ adapter constructor.
- *
- * @param {Namespace} namespace
- * @api public
+ * Base Adapter constructor.
  */
 
 export class BaseAdapter extends EventEmitter implements Adapter {
@@ -102,6 +99,9 @@ export class BaseAdapter extends EventEmitter implements Adapter {
       }
     });
   }
+  /** 
+   * SocketIds accessor to comply with the interface defined by @types/socket.io
+  */
   get sids() {
     const result: SocketIdsDictionary = {};
     for (const [roomName, participants] of this._rooms.entries()) {
@@ -111,8 +111,6 @@ export class BaseAdapter extends EventEmitter implements Adapter {
     }
     return result;
   }
-
-  // { [id: string]: { [room: string]: boolean; }; };
 
   get namespace(): Namespace {
     return this.nsp;
