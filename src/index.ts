@@ -118,6 +118,10 @@ export class BaseAdapter extends EventEmitter implements Adapter {
   set namespace(value: Namespace) {
     this.nsp = value;
   }
+  
+  /**
+   * Accessor for a dictionary of rooms to comply with the interface defined by @types/socket.io
+  */
   get rooms(): Rooms {
     const roomResult: Rooms = {};
     for (const [roomName, participants] of this._rooms.entries()) {
