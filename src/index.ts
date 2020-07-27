@@ -310,10 +310,6 @@ export class BaseAdapter extends EventEmitter implements Adapter {
   }
 }
 
-export class RabbitSocketIOAdapter extends BaseAdapter {
-  constructor(namespace: Namespace) {
-    super(namespace);
-  }
-}
+
 
 export default BaseAdapter;
